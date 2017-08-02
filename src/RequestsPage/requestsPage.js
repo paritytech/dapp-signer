@@ -22,13 +22,11 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import Store from '@parity/shared/mobx/signerStore';
 import { newError } from '@parity/shared/redux/actions';
 import { startConfirmRequest, startRejectRequest } from '@parity/shared/redux/providers/signerActions';
 import { Container, Page, TxList } from '@parity/ui';
-
-// FIXME: We should not be importing from shell!
-import Store from '~/src/Signer/store';
-import RequestPending from '~/src/Signer/components/RequestPending';
+import RequestPending from '@parity/ui/Signer/RequestPending';
 
 import styles from './requestsPage.css';
 
